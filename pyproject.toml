@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "studyroom"
+version = "0.1.0"
+description = ""
+authors = ["Jong012 <Jong012>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pymysql = "^1.1.1"
+pydantic = "^2.10.1"
+sqlalchemy = "^2.0.36"
+mysql = "^0.0.3"
+psutil = "^6.1.0"
+memory-profiler = "^0.61.0"
+
+
+[tool.poetry.group.test.dependencies]
+faker = "^33.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
