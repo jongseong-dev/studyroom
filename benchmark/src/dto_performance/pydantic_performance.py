@@ -18,6 +18,8 @@ users_table = Table(
 )
 
 def reset_database():
+    session.close()
+    engine.dispose()
     if os.path.exists("./test1.db"):
         os.remove("./test1.db")
 

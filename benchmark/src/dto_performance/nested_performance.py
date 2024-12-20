@@ -10,9 +10,10 @@ import os
 DATABASE_URL = "sqlite:///./test2.db"
 
 def reset_database():
-    return
-    # if os.path.exists("./test2.db"):
-    #     os.remove("./test2.db")
+    session.close()
+    engine.dispose()
+    if os.path.exists("./test2.db"):
+        os.remove("./test2.db")
 
 engine = create_engine(DATABASE_URL)
 metadata = MetaData()
